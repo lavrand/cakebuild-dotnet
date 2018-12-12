@@ -7,3 +7,7 @@ RUN apt-get update && apt-get -y install libicu-dev \
     && export PATH=$PATH:/root/.dotnet \
     && echo "export PATH=$PATH:/root/.dotnet" >> ~/.bashrc \
     && dotnet help
+
+ADD runbuild.sh /
+
+ENTRYPOINT [ "./runbuild.sh" ]
