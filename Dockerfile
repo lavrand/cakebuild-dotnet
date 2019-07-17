@@ -1,4 +1,4 @@
-FROM mono:latest
+FROM mono:5.18
 
 RUN apt-get update && apt-get -y install libicu-dev && apt-get install -y git \
     && curl -L -o /tmp/dotnet-install.sh https://dot.net/v1/dotnet-install.sh \
